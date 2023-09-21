@@ -1,0 +1,80 @@
+programa 
+{
+  funcao inicio()
+  {
+    inteiro Chessburguer = 0, Xbacon = 0
+   
+    inteiro Xtudo = 0, Refrigerante = 0, total_votos = 0
+   
+    real Quantidade_Chessburguer, Quantidade_Xbacon
+   
+    real Quantidade_Xtudo, Quantidade_Refrigerante
+
+   
+    inteiro Pedido
+   
+    faca
+    {
+      escreva("Lanchonete do Hyago seja bemvinde !!!!!!!!!,")
+      escreva("Escolha seu Lanche e em seguida tecle cinco para encerrar seu Pedido\n\n")
+     
+      escreva("  1 -> Chessburguer R$10 \n")
+      escreva("  2 -> Xbacon R$12 \n")
+      escreva("  3 -> Xtudo R$15 \n")
+      escreva("  4 -> Refrigerante 7 \n")
+     
+      escreva("\nQualquer número diferente de  1, 2, 3, 4 e 5 Não sera contabilizado\n")
+      escreva("Digite qual deseja adicionar ao carrinho : ")
+     
+      leia(Pedido)
+      
+
+      escolha (Pedido)
+      {
+        caso 5:
+          escreva ("Pedido finalizado!\n")
+        pare
+       
+        caso 1:
+          Chessburguer = Chessburguer + 12
+        pare
+       
+        caso 2:
+          Xbacon = Xbacon + 13 // Soma um voto para o candidado B
+        pare
+       
+        caso 3:
+          Xtudo = Xtudo + 15 // Soma um voto em branco
+        pare
+       
+        caso 4:
+          Refrigerante =  Refrigerante + 8
+        pare
+       
+        caso contrario:
+          escreva("Opçâo invalida")
+        pare
+         
+      }      
+    }
+    enquanto(Pedido != 5)
+
+    // Calcula o total de votos
+    total_votos = Chessburguer + Xbacon + Xtudo + Refrigerante
+
+    // Se houve votos, calcula a Quantidade de votos de cada candidato
+   
+    se (total_votos > 0)
+    {
+      Quantidade_Chessburguer = (Chessburguer * 100.0) / total_votos  
+      Quantidade_Xbacon = (Xbacon * 100.0) / total_votos
+      Quantidade_Xtudo = (Xtudo * 100.0) / total_votos
+      Quantidade_Refrigerante = (Refrigerante * 100.0) / total_votos
+
+      escreva("\n")
+     
+      escreva("Total á pagar R$: ", total_votos, "\n\n")
+
+    }
+  }
+}     
