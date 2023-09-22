@@ -15,7 +15,7 @@ programa
    
     faca
     {
-      escreva("Lanchonete do Hyago seja bemvinde !!!!!!!!!,")
+      escreva("Lanchonete do Hyago seja bemvinde !!!!!!!!!,")versão 2")
       escreva("Escolha seu Lanche e em seguida tecle cinco para encerrar seu Pedido\n\n")
      
       escreva("  1 -> Chessburguer R$10 \n")
